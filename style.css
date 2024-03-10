@@ -1,0 +1,94 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+p {
+    font-size: 1.5em;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+#countdown {
+    font-size: 2em;
+    color: #ffcc00;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow the countdown elements to wrap on smaller screens */
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out 0.5s forwards;
+}
+
+#countdown div {
+    margin: 10px;
+}
+
+#countdown div span.number {
+    display: inline-block;
+    margin: 0 2px;
+    color: #ffcc00;
+    transform-origin: 50% 50%;
+}
+
+@keyframes fadeInNumber {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#countdown div span.unit {
+    font-size: 0.8em;
+    color: #999999;
+}
+
+/* Adjustments for smaller screens */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    #countdown div {
+        margin: 5px;
+    }
+}
