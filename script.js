@@ -10,5 +10,6 @@ $(document).ready(function () {
 
         // Adding animation only to the changing numbers
         $('.number').addClass('fadeInNumber');
+        $('.contact-btn').addClass('fadeInNumber');
     });
 });

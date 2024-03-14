@@ -44,7 +44,6 @@ p {
     color: #ffcc00;
     display: flex;
     flex-wrap: wrap;
-    /* Allow the countdown elements to wrap on smaller screens */
     justify-content: center;
     opacity: 0;
     animation: fadeIn 1.5s ease-out 0.5s forwards;
@@ -78,7 +77,33 @@ p {
     color: #999999;
 }
 
-/* Adjustments for smaller screens */
+.contact-btn {
+    background-color: #ffcc00;
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeInNumber 1.5s ease-out 0.5s forwards;
+    border-radius: 5px;
+}
+
+@keyframes fadeInButton {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.contact-btn:hover {
+    background-color: #ffd633;
+}
+
 @media only screen and (max-width: 600px) {
     h1 {
         font-size: 2.5em;
